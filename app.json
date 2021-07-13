@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "App-movi-react-native",
-    "slug": "App-movi-react-native",
+    "name": "App-movil-react-native",
+    "slug": "App-movil-react-native",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
