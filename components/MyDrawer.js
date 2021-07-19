@@ -3,6 +3,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native';
 import Inicio from './Inicio'
+import Movies from './Movies'
 import Search from './Search'
 import List from './List';
 
@@ -27,7 +28,7 @@ export default function MyDrawer() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Inicio">
         <Drawer.Screen name="Inicio" component={HomeTab} />
-        <Drawer.Screen name="Buscar" component={Search} />
+        <Drawer.Screen name="Buscar peliculas" component={Movies} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
