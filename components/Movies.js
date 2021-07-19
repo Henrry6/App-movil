@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, ScrollView, StyleSheet, SafeAreaView } from "react-native";
+import { View, Text, ScrollView, StyleSheet, SafeAreaView, Button } from "react-native";
+import Carousel from 'react-native-snap-carousel';
 
 const Movies = () => {
   const [movie, setMovie] = useState(null)
@@ -14,17 +15,25 @@ const Movies = () => {
       }
     }, []);
 
+  const _Pelicula = () => {
+    return (
+      <View style={{marginTop: 40, marginLeft: 12 }}>
+        <Text style={styles.titles}>Título</Text>
+        <Text style={{color: 'blue', fontWeight: 'bold'}}>{movie == null ? "" : movie.Title}</Text>
+        <Text style={styles.titles}>Año</Text>
+        <Text style={{color: 'blue', fontWeight: 'bold'}}>{movie == null ? "" : movie.Released}</Text>
+        <Text style={styles.titles}>Descripción</Text>
+        <Text style={{color: 'blue', fontWeight: 'bold'}}>{movie == null ? "" : movie.Plot}</Text>
+      </View>
+    );
+  }
   return (
     <SafeAreaView>
       <ScrollView>
-          <View style={{marginTop: 40, marginLeft: 12 }}>
-            <Text style={styles.titles}>Título</Text>
-            <Text style={{color: 'blue', fontWeight: 'bold'}}>{movie == null ? "" : movie.Title}</Text>
-            <Text style={styles.titles}>Año</Text>
-            <Text style={{color: 'blue', fontWeight: 'bold'}}>{movie == null ? "" : movie.Released}</Text>
-            <Text style={styles.titles}>Descripción</Text>
-            <Text style={{color: 'blue', fontWeight: 'bold'}}>{movie == null ? "" : movie.Plot}</Text>
-          </View>
+        <View styles= {styles.bto}>
+          {/* <Button   title="Obtener pokemons" onPress={Pelicula}/> */}
+          <_Pelicula />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -38,9 +47,8 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold'
   },
-  logo: {
-    width: 66,
-    height: 58,
+  bto: {
+    marginTop: 66,
   },
 });
 

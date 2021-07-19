@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"name": "Dimensions of Dialogue (Moznosti dialogu)",
+		"year": 2008,
+		"descripcion": "Curabitur at ipsum ac tellus semper interdum.",
+		"image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/el-despertar-de-la-fuerza-1575448990.jpg?crop=1xw:1xh;center,top&resize=480:*"
+	},
+	{
+		"id": 2,
+		"name": "Deadly Companions, The",
+		"year": 1995,
+		"descripcion": "Maecenas pulvinar lobortis est. Phasellus sit amet erat. Nulla tempus.",
+		"image": "https://cdn.dribbble.com/users/3281732/screenshots/13661330/media/1d9d3cd01504fa3f5ae5016e5ec3a313.jpg?compress=1&resize=1200x1200"
+	},
+	{
+		"id": 3,
+		"name": "Horrible Bosses",
+		"year": 1992,
+		"descripcion": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
+		"image": "https://cdn.dribbble.com/users/3281732/screenshots/11205211/media/44c854b0a6e381340fbefe276e03e8e4.jpg?compress=1&resize=1200x1200"
+	},
+	{
+		"id": 4,
+		"name": "Behind Enemy Lines",
+		"year": 2003,
+		"descripcion": "Phasellus in felis. Donec semper sapien a libero. Nam dui. Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius. Integer ac leo. Pellentesque ultrices mattis odio.",
+		"image": "https://cdn.dribbble.com/users/3281732/screenshots/11192830/media/7690704fa8f0566d572a085637dd1eee.jpg?compress=1&resize=1200x1200"
+	},
+	{
+		"id": 5,
+		"name": "Of Snails and Men (Despre oameni si melci)",
+		"year": 2003,
+		"descripcion": "Nulla mollis molestie lorem. Quisque ut erat. Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem. Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat. Praesent blandit. Nam nulla.",
+		"image": "https://cdn.dribbble.com/users/3281732/screenshots/13130602/media/592ccac0a949b39f058a297fd1faa38e.jpg?compress=1&resize=1200x1200"
+	}
+]
