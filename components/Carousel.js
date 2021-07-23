@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StatusBar, Image, Animated, View, Dimensions, StyleSheet, Button } from 'react-native';
 const { width, height } = Dimensions.get('screen');
 
@@ -15,23 +15,30 @@ const data1 = [
   const imageW = width * 0.7;
   const imageH = imageW * 1.54;
 
-  let img = []
   function getMovie(data) {
+    let img = []
     data.map(x => {
       img.push(x.image)
     })
     return img
   }
   
-  export default Courosel = ({ navigation }) => {
-    const [mov, setMovie] = useState(getMovie(data))
-  // // let img = []
-  // useEffect(()=> {
-  //   mov.map(x => {
-  //     setMovie(x.image)
-  //     })
-  //     console.log(mov)
-  // }, [])
+export default Courosel = ({ navigation }) => {
+  const [mov, setMovie] = useState(() => getMovie(data))
+  // const [renderRow, setRender] = useState('')
+
+  function renderRow (item) {
+    console.log(item)
+  }
+
+  const getDetail = (detalles) => {
+
+    console.log(detalles)
+    // const result = data.find((movie) => movie.image === detalles)
+    // console.log(result)
+    // navigation.navigate('Buscar peliculas', result)
+
+  }
   const scrollX = React.useRef(new Animated.Value(0)).current;
     return (
         <View style={{ flex: 1, backgroundColor: '#000' }}>
@@ -71,11 +78,13 @@ const data1 = [
               [{nativeEvent: {contentOffset: {x: scrollX}}}],
               {useNativeDriver: true}
             )}
-              keyExtractor={(_, index) => index.toString()}
+              keyExtractor={(index) => index.toString()}
+              // initialScrollIndex={3}
+              // getItemLayout={getItemLayout}
               horizontal
               pagingEnabled
               renderItem={({item}) => {
-                return <View style={{width,
+                return (<><View style={{width,
                 justifyContent: 'center',
                 alignItems: 'center',
                 shadowOpacity: .5,
@@ -84,7 +93,8 @@ const data1 = [
                   height: 0
                 },
                 shadowRadius:20
-                }}>
+                }}
+                >
                   <Image source={{uri: item}} style={{
                     width: imageW,
                     height: imageH,
@@ -92,10 +102,12 @@ const data1 = [
                     borderRadius: 16
                   }}
                   />
+                  <Button title="Ver detalles" onPress={() => 
+                  navigation.navigate('Buscar peliculas', {img: item, data, show: true })}/>
                 </View>
+                </>)
               }}
-            />
-            <Button title="Ver detalles" onPress={() => navigation.navigate('Buscar peliculas')}/>
+              />
         </View>
     );
 };
